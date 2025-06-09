@@ -1,5 +1,4 @@
 # AP-CSA-Final: Academic Generator
-Submission of AP CSA Final. 
 import java.util.ArrayList;
 import java.lang.Thread;
 import java.util.Scanner;
