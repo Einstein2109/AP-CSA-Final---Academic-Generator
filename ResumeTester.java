@@ -154,7 +154,7 @@ public class ResumeTester
                 userInput.nextLine();
                 String sat = userInput.nextLine();
                 //Program is ran if Student did take SAT
-                if(sat.equals("y"))
+                if(sat.equals("y") || sat.length()==3)
                 {
                     boolean hasTaken = true; 
                     System.out.println("What was your score? (Please input as an integer.)");
@@ -163,7 +163,7 @@ public class ResumeTester
                     
                     System.out.println("Finally, do you have any notable work experience?");
                     String work = userInput.nextLine();
-                    if(work.equals("y"))
+                    if(work.equals("y") || work.length()==3)
                     {
                         boolean hasWork = true;
                         System.out.println("What work have you conducted or have been employed in? (Be as descriptive as you wish.) \n\nIf you have not been involved in any work, please put, 'N/A'.");
@@ -173,6 +173,7 @@ public class ResumeTester
                         System.out.print("\u001b[H\u001b[2J");
                         System.out.println("Calibrating Final Data....");
                         Thread.sleep(5000);
+                        System.out.print("\u001b[H\u001b[2J");
                         System.out.println(performance.generateAcademicResume(student, gradeSequence));
                         Thread.sleep(8000);
                         //Pitiful Way of Incorporating Polymorphism - I know this is seemingly trivial, but hope you would consider accepting this.
@@ -188,6 +189,7 @@ public class ResumeTester
                     System.out.print("\u001b[H\u001b[2J");
                     System.out.println("Calibrating Final Data....");
                     Thread.sleep(5000);
+                    System.out.print("\u001b[H\u001b[2J");
                     System.out.println(performance.generateAcademicResume(student, gradeSequence));
                     Thread.sleep(8000);
                     
@@ -197,12 +199,12 @@ public class ResumeTester
                     }
                 }
                 //Program is Ran if Student did not take SAT
-                else if(sat.equals("n"))
+                else if(sat.equals("n") || sat.length() == 2)
                 {
                     boolean hasTaken = false;
                     System.out.println("Finally, do you have any notable work experience?");
                     String work = userInput.nextLine();
-                    if(work.equals("y"))
+                    if(work.equals("y") || work.length()==3)
                     {
                         boolean hasWork = true;
                         System.out.println("What work have you conducted or have been employed in? (Be as descriptive as you wish.) \n\nIf you have not been involved in any work, please put, 'N/A'.");
@@ -212,6 +214,7 @@ public class ResumeTester
                         System.out.print("\u001b[H\u001b[2J");
                         System.out.println("Calibrating Final Data....");
                         Thread.sleep(5000);
+                        System.out.print("\u001b[H\u001b[2J");
                         System.out.println(performance.generateAcademicResume(student, gradeSequence));
                         Thread.sleep(8000);
                         
